@@ -178,6 +178,7 @@ console.log(
     " Books in the store"
 );
 
+//question 2
 console.log(
   "Ques 2- Print the names of all the books. (First, create a list containing only the names.)\n"
 );
@@ -188,6 +189,7 @@ books.forEach((book) => {
 });
 console.log("Names of books:\n" + namesOfBooks.join("\n"));
 
+//question 3
 console.log("\nQues 3- Print the name and price of all 'Fantasy' books.\n");
 
 let fantasyBooks = books.filter((item) => item.genre == "Fantasy");
@@ -197,6 +199,7 @@ fantasyBooks.forEach((book) => {
   console.log(`      Title : ${book.title} \t Price : $${book.price}`);
 });
 
+//question 4
 console.log(
   "\nQues 4- Print the name and genre of all classics, dystopias, and mystery books.\n"
 );
@@ -210,9 +213,10 @@ let commonBooks = books.filter(
 
 console.log("Names classics, dystopian, and mystery  books:\n");
 commonBooks.forEach((book) => {
-  console.log(`  : ${book.genre} \t Price : $${book.price}`);
+  console.log(`  : ${book.genre} \t Name:{book.name}`);
 });
 
+//question 5
 console.log(
   "\nQues 5- Print the name and price of all books that cost more than $10.\n"
 );
@@ -224,6 +228,8 @@ booksPriceMoreThan10$.forEach((book) => {
   console.log(`  : ${book.title} \t Price : $${book.price}`);
 });
 
+
+//question 6
 console.log(
   "\nQues 6-How much is the entire book holding worth? (What is the total price, if you were to sell all the books?)\n"
 );
@@ -234,6 +240,7 @@ books.map((item) => {
 });
 console.log("\nTotal cost of all books Total: " + total.toFixed(2) + "$");
 
+//question 7
 console.log(
   "\nQues 7- Which books are worth the most overall, dystopian or mystery?\n"
 );
@@ -246,11 +253,12 @@ mysterBooks.sort((a, b) => b.price - a.price);
 console.log("Ans: In Overall books highest price is $" + books[0].price);
 console.log(" In Mystery books highest price is $" + mysterBooks[0].price);
 
+//question 8
 console.log(
   "\nQues 8- Print the names of all the books in alphabetical order.\n"
 );
 
-books.sort((a, b) => {
+namesOfBooks.sort((a, b) => {
   let x = a.title.toLowerCase();
   let y = b.title.toLowerCase();
   if (x < y) {
@@ -262,7 +270,7 @@ books.sort((a, b) => {
   return 0;
 });
 
-console.log("Ans: Books Alphabaticaly " + JSON.stringify(books));
+console.log("Ans: Books Alphabaticaly " + JSON.stringify(namesOfBooks));
 
 console.log("\nQues 9- Which book is there a duplicate of?\n");
 
@@ -374,3 +382,4 @@ const addBook = (list, title, author, genre, price) => {
 };
 
 addBook(books, "demo book", "gaurav", "Classic", 9);
+
